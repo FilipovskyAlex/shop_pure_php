@@ -4,11 +4,9 @@
             <div class="sidebar">
                 <p class="catalog">Каталог</p>
                 <ul class="listing-item">
-                    <li class="item"><a href="#">Категория</a></li>
-                    <li class="item"><a href="#">Категория</a></li>
-                    <li class="item"><a href="#">Категория</a></li>
-                    <li class="item"><a href="#">Категория</a></li>
-                    <li class="item"><a href="#">Категория</a></li>
+                    <?php foreach($categoryList as $categoryItem) :?>
+                    <li class="item"><a href="/category/<?= $categoryItem['id']?>"><?= $categoryItem['name']?></a></li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
             <div class="listing">
