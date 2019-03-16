@@ -12,30 +12,14 @@
             <div class="listing">
                 <p class="listing">Последние товары</p>
                 <div class="d-flex main">
+                    <? foreach ($productList as $productItem): ?>
                     <div class="item">
-                        <p class="item"><img src="../../template/images/dress.jpg" alt="dress"></p>
-                        <div class="price">$120</div>
-                        <div class="name">Dress E-140-t</div>
+                        <p class="item"><img src="../../template/<?= $productItem['image']?>" alt="dress"></p>
+                        <div class="price">$<?= $productItem['price']?></div>
+                        <div class="name"><a href="/product/<?= $productItem['id']?>"><?= $productItem['name']?></a></div>
                         <div class="add"><a href="#"><i class="fas fa-shopping-cart"></i>В корзину</a></div>
                     </div>
-                    <div class="item">
-                        <p class="item"><img src="../../template/images/dress.jpg" alt="dress"></p>
-                        <div class="price">$120</div>
-                        <div class="name">Dress E-140-t</div>
-                        <div class="add"><a href="#"><i class="fas fa-shopping-cart"></i>В корзину</a></div>
-                    </div>
-                    <div class="item">
-                        <p class="item"><img src="../../template/images/dress.jpg" alt="dress"></p>
-                        <div class="price">$120</div>
-                        <div class="name">Dress E-140-t</div>
-                        <div class="add"><a href="#"><i class="fas fa-shopping-cart"></i>В корзину</a></div>
-                    </div>
-                    <div class="item">
-                        <p class="item"><img src="../../template/images/dress.jpg" alt="dress"></p>
-                        <div class="price">$120</div>
-                        <div class="name">Dress E-140-t</div>
-                        <div class="add"><a href="#"><i class="fas fa-shopping-cart"></i>В корзину</a></div>
-                    </div>
+                    <? endforeach; ?>
                 </div>
             </div>
         </div>
