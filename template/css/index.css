@@ -1,0 +1,291 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+div.container-fluid {
+    padding: 0;
+}
+
+header.header {
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+ul {
+    list-style: none;
+}
+
+ul.nav-meta {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+ul.nav-meta li {
+    display: inline-block;
+}
+
+ul.nav-meta li.home {
+    padding-left: 30px;
+}
+
+ul li.shopping-cart {
+    padding-left: 887px;
+}
+
+i.fa-user, i.fa-lock, i.fa-shopping-cart {
+    padding-right: 3px;
+}
+
+i.fa-angle-down {
+    padding-left: 3px;
+}
+
+/* dropdown */
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: #f1f1f1;
+    min-width: 130px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    line-height: 24px;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+/*  */
+
+nav ul li a {
+    text-decoration: none;
+    color: #191919;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 48px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+ul li a:hover {
+    color: #10c9c3;
+}
+
+p.logo img.logo {
+    float: left;
+    padding-top: 18px;
+    padding-left: 42px;
+}
+
+/* main-content */
+
+p.catalog, p.listing {
+    text-decoration: none;
+    text-align: center;
+    color: #10c9c3;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+ul.listing-item {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.listing-item li a {
+    text-decoration: none;
+    color: #191919;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 48px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+div.main {
+    /* для автоматического переноса контента на новую строку */
+    flex-flow: row wrap; 
+}
+
+div.sidebar {
+    padding-left: 70px;
+    padding-top: 10px;
+}
+
+div.listing {
+    padding-left: 100px;
+    padding-top: 10px;
+}
+
+div.item {
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+div.item p.item img {
+    width: 250px;
+    height: 300px;
+}
+
+.item div.price {
+    text-decoration: none;
+    text-align: center;
+    color: #10c9c3;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+}
+
+.item div.name {
+    text-decoration: none;
+    text-align: center;
+    color: #191919;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.item div.add {
+    padding-top: 3px;
+    text-align: center;
+}
+
+.item div.add a {
+    text-decoration: none;
+    color: #10c9c3;
+}
+
+/* slider */
+
+
+
+/* footer */
+
+.footer {
+    width: 100%;
+    background-color: #e0fffe;
+    margin-top: 20px;
+}
+
+.contacts {
+    padding-left: 900px;
+}
+
+.facebook, .google {
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.phone, .email {
+    padding-top: 6px;
+    text-decoration: none;
+    text-align: center;
+    color: #191919;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 48px;
+    padding-right: 35px;
+}
+
+
+/* product-details page */
+
+div.single-item p.item img {
+    width: 350px;
+    height: 400px;
+}
+
+div.single-item {
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+.desc {
+    padding-left: 60px;
+    padding-top: 20px;
+}
+
+div.single-price {
+    text-decoration: none;
+    text-align: center;
+    color: #10c9c3;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    padding-right: 40px;
+}
+
+div.single-name {
+    text-decoration: none;
+    color: #191919;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+div.code {
+    padding: 5px 0;
+    font-size: 13px;
+}
+
+div.condition {
+    padding-top: 5px;
+}
+
+div.count {
+    padding-top: 5px;
+    padding-right: 20px;
+}
+
+div.add-to-cart {
+    padding-left: 20px;
+}
+
+button.add-to-cart {
+    border: none;
+    outline: none;
+    border: 1px solid #00f0e8;
+    border-radius: 3px;
+    background-color: #14cfc9;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 5px 10px;
+}
+
+div.description {
+    padding-top: 30px;
+    color: #191919;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
