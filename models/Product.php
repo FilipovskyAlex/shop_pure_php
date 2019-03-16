@@ -29,7 +29,7 @@ class Product
     {
         $db = Database::getConnection();
 
-        $result = $db->query("SELECT id, code, name, price, image from product WHERE id=$id and status=1");
+        $result = $db->query("SELECT id, code, name, price, image, description from product WHERE id=$id and status=1");
 
         $product = array();
 
@@ -40,6 +40,7 @@ class Product
         $product['code'] = $row['code'];
         $product['price'] = $row['price'];
         $product['image'] = $row['image'];
+        $product['description'] = $row['description'];
 
         return $product;
     }

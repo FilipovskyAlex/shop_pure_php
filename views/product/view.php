@@ -25,11 +25,7 @@
                 <div class="condition">Состояние: новое</div>
                 <div class="condition">Производитель: D&G</div>
                 <div class="description">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, perferendis corrupti, quasi itaque id fuga,
-                    blanditiis deleniti aspernatur officiis praesentium libero! Possimus, omnis cupiditate!
-                    Unde quasi magni illum harum suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, distinctio animi.
-                    Labore eligendi illo corrupti consequatur,
-                    impedit est provident amet praesentium officiis numquam nobis, officia sunt earum sed modi voluptas?
+                    <?= $productList['description']?>
                 </div>
             </div>
         </div>
