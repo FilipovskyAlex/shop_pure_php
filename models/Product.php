@@ -86,4 +86,24 @@ class Product
 
         return $product;
     }
+
+    public static function getProductsListByCategory(int $categoryId) : array
+    {
+        $db = Database::getConnection();
+
+        $result = $db->query("SELECT id, name, price, image from product WHERE status=1 and category_id=$categoryId ORDER BY id DESC LIMIT 10");
+
+        $products = array();
+
+        $i=0;
+        while ($row = $result->fetch()) {
+            $products[$i]['id'] = $row['id'];
+            $products[$i]['name'] = $row['name'];
+            $products[$i]['price'] = $row['price'];
+            $products[$i]['image'] = $row['image'];
+            $i++;
+        }
+
+        return $products;
+    }
 }
