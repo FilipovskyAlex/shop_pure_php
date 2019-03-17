@@ -17,24 +17,23 @@
         <header class="header">
             <nav class="main-nav">
                 <ul class="nav">
-                    <li class="nav-item"><p class="logo"><a href="#"><img class="logo img-responsive" src="../../template/images/logo.png" alt="logo"></a></p></li>
-                    <li class="nav-item shopping-cart"><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>Корзина</a></li>
-                    <li class="nav-item account"><a class="nav-link" href="#"><i class="fas fa-user"></i>Аккаунт</a></li>
-                    <li class="nav-item login"><a class="nav-link" href="#"><i class="fas fa-lock"></i>Вход</a></li>
+                    <li class="nav-item"><p class="logo"><a href="/"><img class="logo img-responsive" src="../../template/images/logo.png" alt="logo"></a></p></li>
+                    <li class="nav-item shopping-cart"><a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i>Корзина</a></li>
+                    <li class="nav-item account"><a class="nav-link" href="/account"><i class="fas fa-user"></i>Аккаунт</a></li>
+                    <li class="nav-item login"><a class="nav-link" href="/login"><i class="fas fa-lock"></i>Вход</a></li>
                 </ul>
                 <ul class="nav-meta">
-                    <li class="nav-item home"><a class="nav-link" href="#">Главная</a></li>
+                    <li class="nav-item home"><a class="nav-link" href="/">Главная</a></li>
                     <li class="nav-item shop dropdown">
                         <a class="dropbtn" href="#">Магазин</a><i class="arrow fas fa-angle-down"></i>
                         <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="/catalog">Каталог</a>
+                            <a href="/cart">Корзина</a>
                         </div>
                     </li>
-                    <li class="nav-item blog"><a class="nav-link" href="#">Блог</a></li>
-                    <li class="nav-item about"><a class="nav-link" href="#">О магазине</a></li>
-                    <li class="nav-item contact"><a class="nav-link" href="#">Контакты</a></li>
+                    <li class="nav-item blog"><a class="nav-link" href="/blog">Блог</a></li>
+                    <li class="nav-item about"><a class="nav-link" href="/about">О магазине</a></li>
+                    <li class="nav-item contact"><a class="nav-link" href="/contacts">Контакты</a></li>
                 </ul>
             </nav>
         </header>
