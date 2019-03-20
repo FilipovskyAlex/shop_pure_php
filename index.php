@@ -11,8 +11,11 @@ error_reporting(E_ALL);
  * Подключение файлов системы
  */
 define('ROOT', dirname(__FILE__));
-require_once (ROOT.'/components/Router.php');
-require_once (ROOT.'/components/Database.php');
+
+/*
+ * Подключение через автозагрузку классов во всем проекте
+ */
+require_once (ROOT.'/components/Autoload.php');
 
 /*
  * Вызов Router
