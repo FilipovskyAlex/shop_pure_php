@@ -16,7 +16,7 @@
                     <div class="item">
                         <p class="item"><img src="../../template/<?= $productItem['image']?>" alt="dress"></p>
                         <div class="price">$<?= $productItem['price']?></div>
-                        <div class="name"><a href="/product/<?= $productItem['id']?>"><?= $productItem['name']?></a></div>
+                        <div class="name"><a href="/product/<?= $productItem['id']?>">ID<?= $productItem['id']?><?= $productItem['name']?></a></div>
                         <div class="add"><a href="#"><i class="fas fa-shopping-cart"></i>В корзину</a></div>
                     </div>
                 <? endforeach; ?>

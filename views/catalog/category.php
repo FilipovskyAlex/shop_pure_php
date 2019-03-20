@@ -18,12 +18,14 @@
                     <div class="item">
                         <p class="item"><img src="../../template/<?= $categoryProduct['image']?>" alt="dress"></p>
                         <div class="price">$<?= $categoryProduct['price']?></div>
-                        <div class="name"><a href="/product/<?= $categoryProduct['id']?>"><?= $categoryProduct['name']?></a></div>
+                        <div class="name"><a href="/product/<?= $categoryProduct['id']?>">ID<?= $categoryProduct['id']?><?= $categoryProduct['name']?></a></div>
                         <div class="add"><a href="#"><i class="fas fa-shopping-cart"></i>В корзину</a></div>
                     </div>
                 <? endforeach; ?>
             </div>
         </div>
     </div>
+
+    <? echo $pagination->get();  ?>
 
 <?php include_once ROOT.'/views/layouts/footer.php'?>

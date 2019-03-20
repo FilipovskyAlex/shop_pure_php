@@ -8,7 +8,7 @@ class Product
     /**
      * Default count of products on single page
      */
-    const SHOW_BY_DEFAULT  = 8;
+    const SHOW_BY_DEFAULT  = 6;
 
     /**
      * Get fixed list of products
@@ -87,11 +87,18 @@ class Product
         return $product;
     }
 
-    public static function getProductsListByCategory(int $categoryId) : array
+    public static function getProductsListByCategory(int $categoryId, int $page=1) : array
     {
+        $limit = self::SHOW_BY_DEFAULT;
+        $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
+
         $db = Database::getConnection();
 
-        $result = $db->query("SELECT id, name, price, image from product WHERE status=1 and category_id=$categoryId ORDER BY id DESC LIMIT 10");
+        $result = $db->query("
+            SELECT id, name, price, image 
+            from product 
+            WHERE status=1 and category_id=$categoryId 
+            ORDER BY id DESC LIMIT $limit OFFSET $offset" );
 
         $products = array();
 
@@ -105,5 +112,16 @@ class Product
         }
 
         return $products;
+    }
+
+    public static function getTotalProductsInCategory(int $categoryId) : int
+    {
+        $db = Database::getConnection();
+
+        $result = $db->query("SELECT count('id') as count from product where status=1 and category_id=$categoryId");
+
+        $total = $result->fetch(PDO::FETCH_ASSOC);
+
+        return $total['count'];
     }
 }

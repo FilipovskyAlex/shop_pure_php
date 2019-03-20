@@ -2,6 +2,7 @@
 
 include_once(ROOT.'/models/Category.php');
 include_once(ROOT.'/models/Product.php');
+include_once(ROOT.'/components/Pagination.php');
 
 class CatalogController
 {
@@ -14,10 +15,13 @@ class CatalogController
         return true;
     }
 
-    public function actionCategory(int $categoryId) {
+    public function actionCategory(int $categoryId, int $page=1) {
+        $total = Product::getTotalProductsInCategory($categoryId);
+
+        $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
 
         $categoryList = Category::getCategoriesList();
-        $categoryProducts = Product::getProductsListByCategory($categoryId);
+        $categoryProducts = Product::getProductsListByCategory($categoryId, $page);
 
         require_once(ROOT.'/views/catalog/category.php');
 

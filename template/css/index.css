@@ -327,3 +327,35 @@ div.description {
 ul li a.active {
     color: #10c9c3;
 }
+
+/* Pagination */
+
+ul.pagination {
+    list-style: none;
+    width: 17%;
+    margin: 0 auto;
+}
+ul.pagination li {
+    width: 32px;
+    height: 32px;
+    background-color: #10c9c3;
+    margin: 0 5px;
+}
+
+ul.pagination li:hover {
+    background-color: #1995c9;
+}
+
+ul.pagination li.active {
+    background-color: #1995c9;
+}
+
+ul.pagination li a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+    left: 10px;
+    color: #191919;
+}
