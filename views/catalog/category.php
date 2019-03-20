@@ -5,7 +5,9 @@
             <p class="catalog">Каталог</p>
             <ul class="listing-item">
                 <?php foreach($categoryList as $categoryItem) :?>
-                    <li class="item"><a href="/category/<?= $categoryItem['id']?>"><?= $categoryItem['name']?></a></li>
+                    <li class="item"><a
+                                class="<? if($categoryId == $categoryItem['id']): echo 'active'?><? endif ?>"
+                                href="/category/<?= $categoryItem['id']?>"><?= $categoryItem['name']?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>

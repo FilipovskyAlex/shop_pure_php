@@ -323,3 +323,7 @@ div.description {
     font-weight: 500;
     line-height: 24px;
 }
+
+ul li a.active {
+    color: #10c9c3;
+}
