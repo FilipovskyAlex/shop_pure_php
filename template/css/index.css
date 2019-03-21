@@ -366,3 +366,38 @@ ul.pagination li a {
     left: 10px;
     color: #191919;
 }
+
+/* Register */
+
+.register-form {
+    padding-top: 50px;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.register-form button.btn-primary {
+    border: none;
+    background-color: #10c9c3;
+    margin-top: 15px;
+}
+
+.register-form form input {
+    margin-top: 30px;
+}
+
+.err-login, .err-password, .err-email {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+p.sign-up {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: #191919;
+    padding-top: 35px;
+    width: 300px;
+    margin: 0 auto;
+}
