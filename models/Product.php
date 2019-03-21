@@ -71,7 +71,7 @@ class Product
     {
         $db = Database::getConnection();
 
-        $result = $db->query("SELECT id, code, name, price, image, description from product WHERE id=$id and status=1");
+        $result = $db->query("SELECT id, code, name, brand,  price, image, description from product WHERE id=$id and status=1");
 
         $product = array();
 
@@ -81,6 +81,7 @@ class Product
         $product['name'] = $row['name'];
         $product['code'] = $row['code'];
         $product['price'] = $row['price'];
+        $product['brand'] = $row['brand'];
         $product['image'] = $row['image'];
         $product['description'] = $row['description'];
 

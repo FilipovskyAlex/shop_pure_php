@@ -265,6 +265,12 @@ div.single-item {
     padding-top: 20px;
 }
 
+.desc ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
 div.single-price {
     text-decoration: none;
     text-align: center;
@@ -322,6 +328,7 @@ div.description {
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
+
 }
 
 ul li a.active {
