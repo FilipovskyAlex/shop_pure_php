@@ -13,6 +13,11 @@ error_reporting(E_ALL);
 define('ROOT', dirname(__FILE__));
 
 /*
+ * Стартуем сессию
+ */
+session_start();
+
+/*
  * Подключение через автозагрузку классов во всем проекте
  */
 require_once (ROOT.'/components/Autoload.php');
