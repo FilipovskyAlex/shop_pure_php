@@ -371,9 +371,14 @@ ul.pagination li a {
 
 .register-form {
     padding-top: 50px;
-    border-radius: 5px;
     width: 400px;
     height: 400px;
+    margin: 0 auto;
+}
+
+.sign-in-form {
+    width: 350px;
+    height: 313px;
     margin: 0 auto;
 }
 
@@ -383,16 +388,28 @@ ul.pagination li a {
     margin-top: 15px;
 }
 
-.register-form form input {
+.sign-in-form div {
+    /*width: 100px;*/
+    margin: 0 auto;
+}
+
+.sign-in-form div button.btn-primary {
+    border: none;
+    background-color: #10c9c3;
+    width: 90px;
+    margin-top: 15px;
+}
+
+.register-form form input, .sign-in-form form input {
     margin-top: 30px;
 }
 
-.err-login, .err-password, .err-email {
+.err-login, .err-password, .err-email, .err-invalidData {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
 
-p.sign-up {
+p.sign-up, p.sign-in {
     font-family: 'Open Sans', sans-serif;
     font-size: 22px;
     text-align: center;
@@ -400,4 +417,71 @@ p.sign-up {
     padding-top: 35px;
     width: 300px;
     margin: 0 auto;
+}
+
+div#err-invalidData {
+    position: relative;
+    top: 15px;
+    left: 580px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Account */
+
+.wrapper {
+    width: auto;
+    height: 410px;
+    padding: 30px 30px 30px 30px;
+}
+
+.title {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.title p {
+    font-size: 26px;
+    color: #191919;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.edit-profile {
+    background-color: #9df0f0;
+    width: 300px;
+}
+
+.edit-profile:hover, .order-list:hover {
+    background-color: #71f0f0;
+    width: 330px;
+}
+
+.edit-profile p {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.edit-profile p a {
+    text-decoration: none;
+    color: #191919;
+    font-size: 28px;
+    line-height: 48px;
+}
+
+.order-list {
+    background-color: #9df0f0;
+    width: 300px;
+}
+
+.order-list p {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.order-list p a {
+    text-decoration: none;
+    color: #191919;
+    font-size: 28px;
+    line-height: 48px;
 }

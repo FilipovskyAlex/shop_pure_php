@@ -20,7 +20,7 @@
                     <li class="nav-item"><p class="logo"><a href="/"><img class="logo img-responsive" src="../../template/images/logo.png" alt="logo"></a></p></li>
                     <li class="nav-item shopping-cart"><a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i>Корзина</a></li>
                     <li class="nav-item account"><a class="nav-link" href="/account"><i class="fas fa-user"></i>Аккаунт</a></li>
-                    <li class="nav-item login"><a class="nav-link" href="/login"><i class="fas fa-lock"></i>Вход</a></li>
+                    <li class="nav-item login"><a class="nav-link" href="/user/login"><i class="fas fa-lock"></i>Вход</a></li>
                 </ul>
                 <ul class="nav-meta">
                     <li class="nav-item home"><a class="nav-link" href="/">Главная</a></li>

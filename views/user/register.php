@@ -1,5 +1,6 @@
 <?php include_once ROOT.'/views/layouts/header.php'?>
 
+<!-- Switch off notices for message errors only fot this page -->
 <? error_reporting(E_ALL & ~E_NOTICE); ?>
 
     <? if($result === true) : ?>
@@ -41,6 +42,7 @@
         </form>
     </div>
 
+    <!--  binding error messages to their appropriate inputs  -->
     <script>
         let login  = document.getElementById('login');
         let loginCoords = login.getBoundingClientRect();
