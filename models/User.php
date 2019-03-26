@@ -127,4 +127,17 @@ class User
 
         return true;
     }
+
+    public static function getUserById(int $id)
+    {
+        $db = Database::getConnection();
+
+        $sql = 'SELECT * from user where id = :id';
+
+        $result = $db->prepare($sql);
+
+        $result->execute(['id' => $id]);
+
+        return $result->fetch(PDO::FETCH_ASSOC);
+    }
 }

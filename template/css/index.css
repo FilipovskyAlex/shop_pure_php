@@ -436,7 +436,7 @@ div#err-invalidData {
 }
 
 .title {
-    width: 300px;
+    width: 600px;
     margin-bottom: 15px;
 }
 
@@ -444,7 +444,7 @@ div#err-invalidData {
     font-size: 26px;
     color: #191919;
     margin-bottom: 0;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .edit-profile {

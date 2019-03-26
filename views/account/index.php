@@ -1,7 +1,7 @@
 <?php include_once ROOT.'/views/layouts/header.php'?>
 
 <div class="wrapper">
-    <div class="title"><p>Ваш личный кабинет</p></div>
+    <div class="title"><p>Ваш личный кабинет, <?= $user['login']?>, добро пожаловать!</p></div>
     <div class="edit-profile">
         <p><a href="#">Редактировать профиль</a></p>
     </div>
