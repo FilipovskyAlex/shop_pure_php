@@ -376,13 +376,19 @@ ul.pagination li a {
     margin: 0 auto;
 }
 
+.contact-form {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
 .sign-in-form {
     width: 350px;
     height: 313px;
     margin: 0 auto;
 }
 
-.register-form button.btn-primary {
+.register-form button.btn-primary, .contact-form button.btn-primary {
     border: none;
     background-color: #10c9c3;
     margin-top: 15px;
@@ -400,7 +406,7 @@ ul.pagination li a {
     margin-top: 15px;
 }
 
-.register-form form input, .sign-in-form form input {
+.register-form form input, .sign-in-form form input, .contact-form form input {
     margin-top: 30px;
 }
 
@@ -461,6 +467,27 @@ p.edit-data {
     width: 300px;
     margin: 0 auto;
     padding-bottom: 343px;
+}
+
+p.contact-answer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: #191919;
+    padding-top: 35px;
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 309px;
+}
+
+p.contacts-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: #191919;
+    padding-top: 35px;
+    width: 600px;
+    margin: 0 auto;
 }
 
 .edit-profile:hover, .order-list:hover {

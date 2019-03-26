@@ -14,5 +14,6 @@ return [
     'account/edit' => 'account/edit',
     'account' => 'account/index',
 
+    'contacts' => 'site/contact',
     '' => 'site/index',
 ];
