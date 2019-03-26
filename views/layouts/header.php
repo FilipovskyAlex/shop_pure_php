@@ -22,7 +22,7 @@
                         <a class="nav-link" href="/cart">
                             <i class="fas fa-shopping-cart"></i>
                             Корзина
-                            <span>(<?= Cart::countItems(); ?>)</span>
+                            <span id="cart-count">(<?= Cart::countItems(); ?>)</span>
                         </a>
                     </li>
                     <? if(User::isGuest()) : ?>

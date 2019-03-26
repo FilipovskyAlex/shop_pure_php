@@ -9,5 +9,20 @@
 </div>
 </div>
 <script src="../../template/js/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(
+        function () {
+            $("#add-to-card").click(
+                function () {
+                    var id = $(this).getAttribute("data-id");
+                    $.post("/cart/addAjax/" + id, (), function (data) {
+                        $("#cart-count").html(data);
+                    })
+                }
+            );
+        }
+    );
+</script>
 </body>
 </html>
