@@ -18,7 +18,13 @@
             <nav class="main-nav">
                 <ul class="nav">
                     <li class="nav-item"><p class="logo"><a href="/"><img class="logo img-responsive" src="../../template/images/logo.png" alt="logo"></a></p></li>
-                    <li id="shopping-cart" class="nav-item shopping-cart"><a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i>Корзина</a></li>
+                    <li id="shopping-cart" class="nav-item shopping-cart">
+                        <a class="nav-link" href="/cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Корзина
+                            <span>(<?= Cart::countItems(); ?>)</span>
+                        </a>
+                    </li>
                     <? if(User::isGuest()) : ?>
                         <li class="nav-item login"><a class="nav-link" href="/user/login"><i class="fas fa-lock"></i>Вход</a></li>
                     <? else : ?>
