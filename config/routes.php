@@ -11,6 +11,7 @@ return [
     'user/login' => 'user/login',
     'user/logout' => 'user/logout',
 
+    'account/edit' => 'account/edit',
     'account' => 'account/index',
 
     '' => 'site/index',

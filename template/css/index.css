@@ -452,6 +452,17 @@ div#err-invalidData {
     width: 300px;
 }
 
+p.edit-data {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: #191919;
+    padding-top: 35px;
+    width: 300px;
+    margin: 0 auto;
+    padding-bottom: 343px;
+}
+
 .edit-profile:hover, .order-list:hover {
     background-color: #71f0f0;
     width: 330px;

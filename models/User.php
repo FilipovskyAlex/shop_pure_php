@@ -140,4 +140,15 @@ class User
 
         return $result->fetch(PDO::FETCH_ASSOC);
     }
+
+    public static function edit(int $id, string $login, string $password)
+    {
+        $db = Database::getConnection();
+
+        $sql = 'UPDATE user SET login = :login, password= :password WHERE id= :id';
+
+        $result = $db->prepare($sql);
+
+        return $result->execute(['login' => $login, 'password' => $password, 'id' => $id]);
+    }
 }
