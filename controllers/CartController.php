@@ -17,6 +17,14 @@ class CartController
         return true;
     }
 
+    public function actionDelete(int $productId)
+    {
+        Cart::deleteProduct($productId);
+
+        $referrer = $_SERVER['HTTP_REFERER'];
+        header("Location: $referrer");
+    }
+
     public function actionIndex()
     {
         $categories = Category::getCategoriesList();
@@ -29,6 +37,9 @@ class CartController
             $products = Product::getProductsByIds($productIds);
 
             $totalPrice = Cart::getTotalPrice($products);
+        } else {
+            $products = null;
+            $totalPrice = null;
         }
 
         require_once(ROOT.'/views/cart/index.php');

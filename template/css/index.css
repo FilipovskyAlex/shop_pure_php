@@ -528,6 +528,23 @@ p.contacts-title {
     line-height: 48px;
 }
 
+.checkout {
+    background-color: #9df0f0;
+    width: 200px;
+}
+
+.checkout p {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.checkout p a {
+    text-decoration: none;
+    color: #191919;
+    font-size: 18px;
+    line-height: 38px;
+}
+
 /* table on cart page*/
 
 div.user-goods {
