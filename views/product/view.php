@@ -22,7 +22,7 @@
                         <div class="d-flex" style="padding-top: 10px; padding-bottom: 10px;">
                             <div class="single-price">US $<?= $productList['price']?></div>
                             <div class="count">Количество:<span style="padding-left: 20px">3</span></div>
-                            <div class="add-to-cart"><button class="add-to-cart">В корзину</button></div>
+                            <div class="add-to-cart"><button class="add-to-cart"><a style="color: #000;  text-decoration: none" href="/cart/add/<?= $productList['id']; ?>">В корзину</a></button></div>
                         </div>
                     </li>
                     <li>
