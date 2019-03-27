@@ -396,7 +396,7 @@ ul.pagination li a {
     margin: 0 auto;
 }
 
-.register-form button.btn-primary, .contact-form button.btn-primary {
+.register-form button.btn-primary, .contact-form button.btn-primary, .checkout-form button.btn-primary {
     border: none;
     background-color: #10c9c3;
     margin-top: 15px;
@@ -414,7 +414,7 @@ ul.pagination li a {
     margin-top: 15px;
 }
 
-.register-form form input, .sign-in-form form input, .contact-form form input {
+.register-form form input, .sign-in-form form input, .contact-form form input, .checkout-form form input {
     margin-top: 30px;
 }
 
@@ -554,6 +554,16 @@ p.contacts-title {
 div.user-goods {
     padding-top: 8px;
     padding-left: 100px;
+}
+
+div.checkout-form, div.checkout-completed {
+    padding-top: 8px;
+    width: 325px;
+    margin: 0 auto;
+}
+
+div.checkout-form form {
+    text-align: center;
 }
 
 table.user-goods tr th {

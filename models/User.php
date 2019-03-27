@@ -45,6 +45,19 @@ class User
     }
 
     /**
+     * check valid phone number
+     * @param string $phone
+     * @return bool
+     */
+    public static function checkPhone(string $phone) : bool
+    {
+        if(strlen($phone) >= 8) {
+            return true;
+        }
+        else return false;
+    }
+
+    /**
      * check email on unique prop
      * @param string $email
      * @return bool
