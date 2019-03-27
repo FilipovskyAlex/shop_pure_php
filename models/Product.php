@@ -88,6 +88,11 @@ class Product
         return $product;
     }
 
+    /**
+     * @param int $categoryId
+     * @param int $page
+     * @return array
+     */
     public static function getProductsListByCategory(int $categoryId, int $page=1) : array
     {
         $limit = self::SHOW_BY_DEFAULT;
@@ -115,6 +120,11 @@ class Product
         return $products;
     }
 
+    /**
+     * Получает кол-во продуктов из категории
+     * @param int $categoryId
+     * @return int
+     */
     public static function getTotalProductsInCategory(int $categoryId) : int
     {
         $db = Database::getConnection();
@@ -126,6 +136,11 @@ class Product
         return $total['count'];
     }
 
+    /**
+     * Получает все товары с переданными в $productIds идентефикаторами
+     * @param array $productIds
+     * @return array
+     */
     public static function getProductsByIds(array $productIds)
     {
         $db = Database::getConnection();

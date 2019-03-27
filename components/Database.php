@@ -1,7 +1,13 @@
 <?php
 
+/**
+ * Class Database
+ */
 class Database
 {
+    /**
+     * @return PDO
+     */
     public static function getConnection() : PDO
     {
         $path = ROOT.'/config/database.php';

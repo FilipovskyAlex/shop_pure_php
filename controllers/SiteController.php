@@ -1,7 +1,14 @@
 <?php
 
+/**
+ * Class SiteController
+ */
 class SiteController
 {
+    /**
+     * Обработчик index страницы сайта
+     * @return bool
+     */
     public function actionIndex() {
         $categoryList = Category::getCategoriesList();
         $productList = Product::getLatestProducts();
@@ -11,6 +18,10 @@ class SiteController
         return true;
     }
 
+    /**
+     * Обработчик страницы обратной связи
+     * @return bool
+     */
     public function actionContact()
     {
         $userEmail = '';

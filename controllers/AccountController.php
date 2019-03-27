@@ -1,7 +1,14 @@
 <?php
 
+/**
+ * Class AccountController
+ */
 class AccountController
 {
+    /**
+     * Обработчик index страницы личного кабинета пользователя
+     * @return bool
+     */
     public function actionIndex() {
         $userId = User::checkLogged();
 
@@ -12,6 +19,10 @@ class AccountController
         return true;
     }
 
+    /**
+     * ОБработчик изменения профиля пользователя
+     * @return bool
+     */
     public static function actionEdit()
     {
         $userId = User::checkLogged();

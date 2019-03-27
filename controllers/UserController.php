@@ -6,6 +6,7 @@
 class UserController
 {
     /**
+     * регистрация пользователя
      * @return bool
      */
     public static function actionRegister()
@@ -43,6 +44,10 @@ class UserController
         return true;
     }
 
+    /**
+     * login пользователя
+     * @return bool
+     */
     public static function actionLogin()
     {
         if(isset($_POST['submit'])) {
@@ -75,6 +80,9 @@ class UserController
         return true;
     }
 
+    /**
+     * logout пользователя
+     */
     public static function actionLogout()
     {
         unset($_SESSION['user']);

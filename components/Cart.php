@@ -1,8 +1,16 @@
 <?php
 
+/**
+ * Class Cart
+ */
 class Cart
 {
-    public static function addProduct(int $id) 
+    /**
+     * Добавляет продукт в корзину
+     * @param int $id
+     * @return int
+     */
+    public static function addProduct(int $id)
     {
         $productsInCart = array();
 
@@ -21,6 +29,10 @@ class Cart
         return self::countItems();
     }
 
+    /**
+     * Удаляет продукт из корзины
+     * @param int $id
+     */
     public static function deleteProduct(int $id)
     {
         $productsInCart = array();
@@ -36,6 +48,10 @@ class Cart
         }
     }
 
+    /**
+     * Подсчет кол-ва едениц товара в корзине
+     * @return int
+     */
     public static function countItems()
     {
         if(isset($_SESSION['products'])) {
@@ -49,6 +65,10 @@ class Cart
         }
     }
 
+    /**
+     * Получает массив id товаров в сессии с соответствующим количеством каждого товара
+     * @return array|null
+     */
     public static function getProducts()
     {
         if(isset($_SESSION['products'])) {
@@ -58,6 +78,11 @@ class Cart
         return null;
     }
 
+    /**
+     * Получает общую стоимость всех товаров в корзине
+     * @param $products
+     * @return int
+     */
     public static function getTotalPrice($products) : int
     {
         $productInCart = self::getProducts();

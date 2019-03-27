@@ -1,7 +1,14 @@
 <?php
 
+/**
+ * Class CartController
+ */
 class CartController
 {
+    /**
+     * Реализует синхронный запрос на добавление товара в корзину
+     * @param int $id
+     */
     public function actionAdd(int $id)
     {
         Cart::addProduct($id);
@@ -10,6 +17,11 @@ class CartController
         header("Location: $referrer");
     }
 
+    /**
+     * Реализует асинхронный запрос на добавление товара в корзину
+     * @param int $id
+     * @return bool
+     */
     public function actionAddAjax(int $id)
     {
         echo Cart::addProduct($id);
@@ -17,6 +29,10 @@ class CartController
         return true;
     }
 
+    /**
+     * Реализует запрос на удаление товара из корзины
+     * @param int $productId
+     */
     public function actionDelete(int $productId)
     {
         Cart::deleteProduct($productId);
@@ -25,6 +41,10 @@ class CartController
         header("Location: $referrer");
     }
 
+    /**
+     * Реализует представление корзины с товарами
+     * @return bool
+     */
     public function actionIndex()
     {
         $categories = Category::getCategoriesList();

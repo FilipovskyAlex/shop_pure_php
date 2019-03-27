@@ -1,15 +1,28 @@
 <?php
 
+/**
+ * Class Router
+ */
 class Router
 {
+    /**
+     * @var mixed
+     */
     private $routes;
 
+    /**
+     * Router constructor.
+     */
     public function __construct()
     {
         $routesPath = ROOT.'/config/routes.php';
         $this->routes = include($routesPath);
     }
 
+    /**
+     * Возвращает текущий Url
+     * @return string
+     */
     private function checkURI() : string
     {
         if(!empty($_SERVER['REQUEST_URI'])) {
@@ -17,6 +30,9 @@ class Router
         }
     }
 
+    /**
+     * В MVC системе по текущей строке запроса определяет соответсвующие контроллер (controller) и обработчик (action)
+     */
     public function run() {
         $uri = $this->checkURI();
 

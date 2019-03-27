@@ -1,7 +1,14 @@
 <?php
 
+/**
+ * Class CatalogController
+ */
 class CatalogController
 {
+    /**
+     * Обработчик index страницы каталога товаров
+     * @return bool
+     */
     public function actionIndex() {
         $categoryList = Category::getCategoriesList();
         $productList = Product::getCatalog(12);
@@ -11,6 +18,12 @@ class CatalogController
         return true;
     }
 
+    /**
+     * Обработчик index страницы каталога товара определенной категории
+     * @param int $categoryId
+     * @param int $page
+     * @return bool
+     */
     public function actionCategory(int $categoryId, int $page=1) {
         $total = Product::getTotalProductsInCategory($categoryId);
 

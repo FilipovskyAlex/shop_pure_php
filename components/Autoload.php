@@ -1,5 +1,8 @@
 <?php
 
+/*
+ *  Add autoload function for components and models
+ */
 spl_autoload_register(function($class_name)
 {
     $pathes = array(

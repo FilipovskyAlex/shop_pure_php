@@ -85,6 +85,12 @@ class User
         return $result->execute();
     }
 
+    /**
+     * Проверка на существование пользователя с переданными параметрами в БД
+     * @param string $email
+     * @param string $password
+     * @return bool
+     */
     public static function checkUserData(string $email, string $password)
     {
         $db = Database::getConnection();
@@ -92,8 +98,6 @@ class User
         $sql = 'SELECT * from user where email = :email and password = :password';
 
         $result = $db->prepare($sql);
-//        $result->bindParam(":email", $email, PDO::PARAM_INT);
-//        $result->bindParam(":password", $password, PDO::PARAM_INT);
         $result->execute(['email' => $email, 'password' => $password]);
 
         $user = $result->fetch(PDO::FETCH_ASSOC);
@@ -105,11 +109,19 @@ class User
         return false;
     }
 
+    /**
+     * Аунтефикация пользователя
+     * @param int $userId
+     */
     public static function auth(int $userId)
     {
         $_SESSION['user'] = $userId;
     }
 
+    /**
+     * Проверяет залогинин ли пользователь, если нет, перенаправляет его на страницу входа на сайт
+     * @return mixed
+     */
     public static function checkLogged()
     {
         if(isset($_SESSION['user'])) {
@@ -119,6 +131,10 @@ class User
         header("Location: /user/login/");
     }
 
+    /**
+     * Проверяет является ли посетитель сайта гостем или зарегестрированным пользователем
+     * @return bool
+     */
     public static function isGuest() : bool
     {
         if(isset($_SESSION['user'])) {
@@ -128,6 +144,11 @@ class User
         return true;
     }
 
+    /**
+     * Получает пользователя по $id
+     * @param int $id
+     * @return mixed
+     */
     public static function getUserById(int $id)
     {
         $db = Database::getConnection();
@@ -141,6 +162,13 @@ class User
         return $result->fetch(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * Редактирует данные пользователя в БД
+     * @param int $id
+     * @param string $login
+     * @param string $password
+     * @return bool
+     */
     public static function edit(int $id, string $login, string $password)
     {
         $db = Database::getConnection();
