@@ -1,4 +1,4 @@
-<?php include_once ROOT.'/views/layouts/header.php'?>
+<?php include_once ROOT.'/views/layouts/header.php'; ?>
 
 <div class="d-flex">
     <div class="sidebar">
@@ -23,22 +23,29 @@
         </div>
     </div>
 </div>
+    <p class="recommended">Реккомендуемые товары</p>
 <div class="slider" id="slides">
-    <div class="slide showing d-flex">
-        <p class="item"><img src="../../template/images/dress.jpg" alt="dress"></p>
-        <p class="item"><img src="../../template/images/dress.jpg" alt="dress"></p>
-        <p class="item"><img src="../../template/images/dress.jpg" alt="dress"></p>
-    </div>
-    <div class="slide d-flex">
-        <p class="item"><img src="../../template/images/astroworld_t-shirt.jpg" alt="dress"></p>
-        <p class="item"><img src="../../template/images/astroworld_t-shirt.jpg" alt="dress"></p>
-        <p class="item"><img src="../../template/images/astroworld_t-shirt.jpg" alt="dress"></p>
-    </div>
-    <div class="slide d-flex">
-        <p class="item"><img src="../../template/images/joggers-black.jpg" alt="dress"></p>
-        <p class="item"><img src="../../template/images/joggers-black.jpg" alt="dress"></p>
-        <p class="item"><img src="../../template/images/joggers-black.jpg" alt="dress"></p>
-    </div>
+    <? $a = 0; $b = $a + 3; ?>
+    <? for ($j = 0; $j < count($productRecommendedList)/3; $j++) : ?>
+        <div class="slide showing d-flex">
+            <? if ($j >=1) :
+                $a += 3;
+                $b = $a + 3;
+                ?>
+            <? endif; ?>
+            <? for ($i = $a; $i < $b; $i++): ?>
+                <? if(!isset($productRecommendedList[$i])) : ?>
+                <? break; ?>
+                <?endif;?>
+                <div class="item">
+                    <p class="item"><img src="../../template/<?= $productRecommendedList[$i]['image']; ?>" alt=""></p>
+                    <div class="price">$<?= $productRecommendedList[$i]['price']; ?></div>
+                    <div class="name"><a href="/product/<?= $productRecommendedList[$i]['id']?>"><?= $productRecommendedList[$i]['name']?></a></div>
+                    <div class="add"><a href="/cart/add/<?= $productRecommendedList[$i]['id']; ?>"><i class="fas fa-shopping-cart"></i>В корзину</a></div>
+                </div>
+            <? endfor; ?>
+        </div>
+    <? endfor; ?>
 </div>
 
 <?php include_once ROOT.'/views/layouts/footer.php'?>

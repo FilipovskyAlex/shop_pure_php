@@ -11,8 +11,10 @@ class CartController
      */
     public function actionAdd(int $id)
     {
+        // Добавлеяет товар в корзину
         Cart::addProduct($id);
 
+        // Переадресует пользователя на страницу, откуда он добавлял товар в корзину
         $referrer = $_SERVER['HTTP_REFERER'];
         header("Location: $referrer");
     }
@@ -35,8 +37,10 @@ class CartController
      */
     public function actionDelete(int $productId)
     {
+        // Удаляет товар из корзины
         Cart::deleteProduct($productId);
 
+        // Переадресует пользователя на страницу, откуда он удалял товар из корзины
         $referrer = $_SERVER['HTTP_REFERER'];
         header("Location: $referrer");
     }
@@ -47,15 +51,20 @@ class CartController
      */
     public function actionIndex()
     {
+        // Возвращает список категорий
         $categories = Category::getCategoriesList();
 
+        // Возвращает список id товаров в сессии в корзине
         $productsInCart = Cart::getProducts();
 
         if($productsInCart) {
+            // получает id товаров из массива сессии
             $productIds = array_keys($productsInCart);
 
+            // Получает товары
             $products = Product::getProductsByIds($productIds);
 
+            // Возвращает общую стоимость всех товаров в корзине
             $totalPrice = Cart::getTotalPrice($products);
         } else {
             $products = null;

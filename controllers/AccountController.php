@@ -9,9 +9,12 @@ class AccountController
      * Обработчик index страницы личного кабинета пользователя
      * @return bool
      */
-    public function actionIndex() {
+    public function actionIndex()
+    {
+        // Возвращает id пользователя, если он зарегестрирован
         $userId = User::checkLogged();
 
+        // Возвращает пользователя по его id
         $user = User::getUserById($userId);
 
         require_once(ROOT.'/views/account/index.php');
@@ -25,8 +28,10 @@ class AccountController
      */
     public static function actionEdit()
     {
+        // Возвращает id пользователя, если он зарегестрирован
         $userId = User::checkLogged();
 
+        // Возвращает пользователя по его id
         $user = User::getUserById($userId);
 
         $login = $user['login'];
@@ -40,6 +45,7 @@ class AccountController
 
             $errors = false;
 
+            // Проверка введенных данных на валидность
             if(!User::checkLogin($login)) {
                 $errors['login'] = 'Name must be at least 3 characters';
             }
@@ -49,6 +55,7 @@ class AccountController
             }
 
             if($errors == false) {
+                // Изменяет данные пользователя в БД
                 $result = User::edit($userId, $login, $password);
             }
 

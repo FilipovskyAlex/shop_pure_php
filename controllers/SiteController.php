@@ -10,8 +10,15 @@ class SiteController
      * @return bool
      */
     public function actionIndex() {
+
+        // Возвращает список категорий
         $categoryList = Category::getCategoriesList();
+
+        // Возвращает список последних добавленных товаров
         $productList = Product::getLatestProducts();
+
+        // Возвращает список рекоммендованных товаров для слайдера
+        $productRecommendedList = Product::getRecommendedProducts();
 
         require_once(ROOT.'/views/site/index.php');
 

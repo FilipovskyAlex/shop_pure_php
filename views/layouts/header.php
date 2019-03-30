@@ -27,6 +27,7 @@
                     </li>
                     <? if(User::isGuest()) : ?>
                         <li class="nav-item login"><a class="nav-link" href="/user/login"><i class="fas fa-lock"></i>Вход</a></li>
+                        <li class="nav-item login"><a class="nav-link" href="/user/register"><i class="fas fa-door-closed"></i>Регистрация</a></li>
                     <? else : ?>
                         <li id="account" class="nav-item account"><a class="nav-link" href="/account"><i class="fas fa-user"></i>Аккаунт</a></li>
                         <li class="nav-item login"><a class="nav-link" href="/user/logout"><i class="fas fa-unlock"></i>Выход</a></li>

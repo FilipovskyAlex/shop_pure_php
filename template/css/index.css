@@ -35,7 +35,7 @@ ul.nav-meta li.home {
 }
 
 ul li.shopping-cart {
-    padding-left: 967px;
+    padding-left: 837px;
 }
 
 i.fa-user, i.fa-lock, i.fa-shopping-cart {
@@ -193,17 +193,17 @@ div.item p.item img {
 
 div.slide p.item img {
     width: 180px;
+    margin: 0 auto;
     height: 190px;
-    padding-right: 30px;
 }
 
 /* С ними работает слайд шоу */
 
 #slides {
     position: relative;
-    height: 210px;
-    width: 540px;
-    left: 500px;
+    height: 390px;
+    width: 640px;
+    left: 350px;
     top: 20px;
     bottom: 20px;
     list-style-type: none;
@@ -423,7 +423,7 @@ ul.pagination li a {
     font-size: 14px;
 }
 
-p.sign-up, p.sign-in {
+p.sign-up, p.sign-in, p.recommended {
     font-family: 'Open Sans', sans-serif;
     font-size: 22px;
     text-align: center;

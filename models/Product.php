@@ -164,4 +164,26 @@ class Product
 
         return $products;
     }
+
+    public static function getRecommendedProducts()
+    {
+        $db = Database::getConnection();
+
+        $products = array();
+
+        $sql = 'SELECT id, name, price, image from product where is_recommended=1 and status=1 order by id desc ';
+
+        $result = $db->query($sql);
+
+        $i = 0;
+        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $products[$i]['id'] = $row['id'];
+            $products[$i]['name'] = $row['name'];
+            $products[$i]['price'] = $row['price'];
+            $products[$i]['image'] = $row['image'];
+            $i++;
+        }
+
+        return $products;
+    }
 }

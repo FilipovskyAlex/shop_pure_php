@@ -35,7 +35,14 @@ class UserController
             }
 
             if($errors === false) {
+                // Если нет ошибок, то регистрируем пользователя и записываем его id в сессию
                 $result = User::register($login, $email, $password);
+
+                $userId = User::checkUserData($email, $password);
+
+                User::auth($userId);
+
+                header("Location: /");
             }
         }
 
