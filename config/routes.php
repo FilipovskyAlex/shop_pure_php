@@ -23,6 +23,11 @@ return [
     'account/edit' => 'account/edit',
     'account' => 'account/index',
 
+    //    Admin
+    'admin' => 'admin/index',
+
     'contacts' => 'site/contact',
     '' => 'site/index',
+
+
 ];

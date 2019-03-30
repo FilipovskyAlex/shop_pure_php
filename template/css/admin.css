@@ -1,0 +1,81 @@
+/**
+/ Страница стилей админ панели
+ */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+div.container-fluid {
+    padding: 0;
+}
+
+/* header */
+
+header {
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+nav.admin-header {
+    width: 100%;
+    background-color: #e0fffe;
+}
+
+nav.admin-header ul.list {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    justify-content: space-between;
+}
+
+nav.admin-header ul.list li.item {
+    display: inline-block;
+    padding: 4px 25px;
+}
+
+nav.admin-header ul.list li.item a {
+    font-size: 14px;
+}
+
+/* main block */
+
+.title {
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 15px 25px;
+    margin-bottom: 0;
+}
+
+.opportunities-list-hint {
+    padding: 5px 25px;
+    margin-bottom: 0;
+}
+
+.admin-block {
+    width: 100%;
+    padding: 5px 25px;
+}
+
+.admin-block ul.admin-opportunities-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.admin-block ul.admin-opportunities-list li.item {
+    margin: 6px 30px;
+}
+
+.admin-block ul.admin-opportunities-list li.item a {
+    text-decoration: none;
+    color: #106093;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bolder;
+}
+.admin-block ul.admin-opportunities-list li.item a:hover {
+    color: #191493;
+}
