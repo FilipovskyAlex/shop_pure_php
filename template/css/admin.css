@@ -79,3 +79,107 @@ nav.admin-header ul.list li.item a {
 .admin-block ul.admin-opportunities-list li.item a:hover {
     color: #191493;
 }
+
+/* Упарвление товарами */
+
+.admin-breadcrumb {
+    padding: 20px 0 0 0;
+}
+
+.admin-breadcrumb nav ol.breadcrumb {
+    background-color: white;
+}
+
+.admin-breadcrumb nav ol.breadcrumb li {
+    padding: 5px 15px;
+    margin-right: 10px;
+    background-color: #e0fffe;
+    border-radius: 0.5rem;
+}
+
+.admin-breadcrumb nav ol.breadcrumb li.active {
+    color: rebeccapurple;
+    font-size: 18px;
+}
+
+.admin-breadcrumb nav ol.breadcrumb li a {
+    text-decoration: none;
+    color: #191919;
+    font-size: 18px;
+}
+
+.admin-breadcrumb nav ol.breadcrumb li a:hover {
+    color: blue;
+}
+
+.admin-breadcrumb nav ol.breadcrumb>li+li:before { content: none; }
+
+.admin-add-product {
+
+    padding: 0 20px;
+}
+
+.admin-add-product button {
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: #106093;
+    padding: 5px 10px;
+}
+
+.admin-catalog form button.delete, .create-product-form form button {
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: #106093;
+    padding: 5px 10px;
+    margin-left: 22px;
+    color: white;
+}
+.admin-catalog form button.delete:hover {
+    background-color: #0faad6;
+}
+
+.admin-add-product button:hover {
+    background-color: #00a9e5;
+}
+
+.admin-add-product button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.admin-product-table {
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.admin-product-table table tr {
+    padding: 6px 0;
+}
+
+.admin-product-table table tr th {
+    padding: 2px 20px 10px 20px;
+}
+
+.admin-product-table table tr th#name {
+    width: 720px;
+    padding-left: 30px;
+}
+
+.admin-product-table table tr td {
+    padding: 2px 20px;
+}
+
+.admin-product-table table tr td#name {
+    width: 720px;
+    padding-left: 30px;
+}
+
+/* create product admin page*/
+
+.create-product-form {
+    width: 400px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
