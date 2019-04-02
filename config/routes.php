@@ -34,6 +34,11 @@ return [
     'admin/category/delete/([0-9]+)' => 'adminCategory/delete/$1',
     'admin/category' => 'adminCategory/index',
 
+    'admin/order/view' => 'adminOrder/view',
+    'admin/order/edit/([0-9]+)' => 'adminOrder/edit/$1',
+    'admin/order/delete/([0-9]+)' => 'adminOrder/delete/$1',
+    'admin/order' => 'adminOrder/index',
+
     // Админпанель
     'admin' => 'admin/index',
 

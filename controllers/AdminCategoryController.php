@@ -35,7 +35,9 @@ class AdminCategoryController extends AdminBase
         // Проверяем отправлена ли форма
         if(isset($_POST['submit'])) {
             // заносим в массив данные из формы
-            $options['name'] = $_POST['name'];
+            if (isset($_POST['name'])) {
+                $options['name'] = $_POST['name'];
+            }
             $options['sort_order'] = $_POST['sort_order'];
             $options['status'] = $_POST['status'];
 
@@ -78,7 +80,9 @@ class AdminCategoryController extends AdminBase
 
         if(isset($_POST['submit'])) {
             // заносим в массив данные из формы
-            $options['name'] = $_POST['name'];
+            if (isset($_POST['name'])) {
+                $options['name'] = $_POST['name'];
+            }
             $options['sort_order'] = $_POST['sort_order'];
             $options['status'] = $_POST['status'];
 

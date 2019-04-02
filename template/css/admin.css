@@ -183,3 +183,28 @@ nav.admin-header ul.list li.item a {
     margin: 0 auto;
     padding-bottom: 70px;
 }
+
+/* order view page */
+
+.admin-order-view {
+    width: 100%;
+    padding: 15px 0 50px 25px;
+}
+
+.admin-order-view ul.list {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.admin-order-view ul.list li {
+    margin: 5px 5px 10px 5px;
+    border-bottom: 1px solid #dddddd ;
+}
+
+.admin-order-view ul.list li table tr th {
+    padding: 0 10px 0 0;
+}
+
+.admin-order-view ul.list li table tr td {
+    padding: 0 10px 0 0;
+}
