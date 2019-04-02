@@ -7,10 +7,10 @@
                     <a href="/admin/product">Управление товарами</a>
                 </li>
                 <li class="item">
-                    <a href="#">Управление категориями</a>
+                    <a href="/admin/category">Управление категориями</a>
                 </li>
                 <li class="item">
-                    <a href="#">Управление заказами</a>
+                    <a href="# ">Управление заказами</a>
                 </li>
             </ul>
         </div>
