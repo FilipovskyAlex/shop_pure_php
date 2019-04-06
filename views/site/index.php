@@ -14,7 +14,7 @@
         <div class="d-flex main">
             <? foreach ($productList as $productItem): ?>
             <div class="item">
-                <p class="item"><img src="../../template/<?= $productItem['image']?>" alt="dress"></p>
+                <p class="item"><img src="<?= Product::getImage($productItem['name']);?>" alt="dress"></p>
                 <div class="price">$<?= $productItem['price']?></div>
                 <div class="name"><a href="/product/<?= $productItem['id']?>"><?= $productItem['name']?></a></div>
                 <div class="add"><a href="/cart/add/<?= $productItem['id']; ?>"><i class="fas fa-shopping-cart"></i>В корзину</a></div>
@@ -38,7 +38,7 @@
                 <? break; ?>
                 <?endif;?>
                 <div class="item">
-                    <p class="item"><img src="../../template/<?= $productRecommendedList[$i]['image']; ?>" alt=""></p>
+                    <p class="item"><img src="<?= Product::getImage($productRecommendedList[$i]['name']);?>" alt="" /></p>
                     <div class="price">$<?= $productRecommendedList[$i]['price']; ?></div>
                     <div class="name"><a href="/product/<?= $productRecommendedList[$i]['id']?>"><?= $productRecommendedList[$i]['name']?></a></div>
                     <div class="add"><a href="/cart/add/<?= $productRecommendedList[$i]['id']; ?>"><i class="fas fa-shopping-cart"></i>В корзину</a></div>

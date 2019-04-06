@@ -16,7 +16,7 @@
             <div class="d-flex main">
                 <? foreach ($categoryProducts as $categoryProduct): ?>
                     <div class="item">
-                        <p class="item"><img src="../../template/<?= $categoryProduct['image']?>" alt="dress"></p>
+                        <p class="item"><img src="<?= Product::getImage($categoryProduct['name']);?>" alt="dress"></p>
                         <div class="price">$<?= $categoryProduct['price']?></div>
                         <div class="name"><a href="/product/<?= $categoryProduct['id']?>">ID<?= $categoryProduct['id']?><?= $categoryProduct['name']?></a></div>
                         <div class="add"><a id="add-to-card" href="/cart/add/<?= $categoryProduct['id']; ?>" data-id="<?= $categoryProduct['id']; ?>"><i class="fas fa-shopping-cart"></i>В корзину</a></div>

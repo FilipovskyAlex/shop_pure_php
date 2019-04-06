@@ -12,7 +12,7 @@
     </div>
     <div class="single-item">
         <div class="d-flex">
-            <div class="single-item"><p class="item"><img src="../../template/<?= $productList['image']?>" alt="dress"></p></div>
+            <div class="single-item"><p class="item"><img src="<?= Product::getImage($productList['name']);?>" alt="dress"></p></div>
             <div class="desc">
                 <ul>
                     <li>
