@@ -336,14 +336,23 @@ class Product
         return $products;
     }
 
+    /**
+     * Получение изображения
+     * @param string $name
+     * @return string
+     */
     public static function getImage(string $name) : string
     {
+        // название изображения по дефолту
         $noImage = 'no-image-icon-6.png';
 
+        // путь к изображениям
         $path = '/template/images/';
 
+        // путь к конкретному изображению
         $pathToProductImage = $path.$name.'.jpg';
 
+        // проверка на сущесвование файла на диске, $_SERVER["DOCUMENT_ROOT"] необходима для того, чтобы сервер знал, где искать этот файл
         if(file_exists($_SERVER["DOCUMENT_ROOT"].$pathToProductImage)) {
             return $pathToProductImage;
         }
