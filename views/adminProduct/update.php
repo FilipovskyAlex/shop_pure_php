@@ -76,7 +76,8 @@
                 </div>
                 <div class="form-group">
                     <label for="ProductImage">Изображение товара</label>
-                    <input type="file" name="image" value="<?=$product['image']?>" class="form-control" id="ProductImage" style="height: auto; ">
+                    <img src="<?= Product::getImage($product['name']);?>" width="250" alt="" style="padding-bottom: 6px"/>
+                    <input type="file" name="image" value="<?=$product['image'];?>" class="form-control" id="ProductImage" style="height: auto; ">
                 </div>
                 <div class="form-group">
                     <label for="ProductDesc">Описание товара</label>

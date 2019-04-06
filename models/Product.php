@@ -335,4 +335,19 @@ class Product
 
         return $products;
     }
+
+    public static function getImage(string $name) : string
+    {
+        $noImage = 'no-image-icon-6.png';
+
+        $path = '/template/images/';
+
+        $pathToProductImage = $path.$name.'.jpg';
+
+        if(file_exists($_SERVER["DOCUMENT_ROOT"].$pathToProductImage)) {
+            return $pathToProductImage;
+        }
+
+        return $path . $noImage;
+    }
 }
